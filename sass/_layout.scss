@@ -1,0 +1,23 @@
+.container {
+    max-width: 120rem;
+    margin: 8rem auto;
+    width: 80%;
+}
+
+
+.under-sea {
+    border: none;
+    background-color: var(--color-dark-grey-blue);
+    height: 70rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+.addition {
+    background-color: var(--color-spruce);
+  
+}
+

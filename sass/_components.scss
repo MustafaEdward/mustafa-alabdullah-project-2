@@ -1,0 +1,245 @@
+////////////////////////////////////////
+////// HEADER
+.header {
+    height: 100vh;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(#000, 0.6),
+        rgba(#000, 0.7)),
+    url(../img/header-image.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    
+    &__text-box {
+        color: var(--color-white);
+        font-family: var(--barlow-font);
+        font-size: 13.8rem;
+        line-height: 12.6rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        position: absolute;
+        top: 30%;
+        left: 10%;
+        display: block;
+        width: 30%; 
+    }
+    &__image {
+        position: absolute;
+        bottom: -26%;
+        right: 0;
+        display: block;
+    }
+}
+////////////////////////////////////////
+////// NAVIGATION 
+
+.navigation {
+    margin-right: 5rem;
+    &__list {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__item {
+        list-style: none;
+        padding: 3rem 2.5rem;
+    }
+    &__link {
+          color: currentColor;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-family: var(--barlow-font);
+          font-size: 2rem;
+          font-weight: bold;
+          display: block;
+          transition: all .2s;
+
+          &:hover {
+              color: var(--color-robin-egg);
+          }
+    
+    }
+    
+}
+
+
+////////////////////////////////////////
+////// UNDER SEA SECTION 
+
+.under-sea {
+    &__heading {
+         font-family: var(--barlow-font);
+         font-size: 4.2rem;
+         font-weight: bold;
+         text-transform: uppercase;
+         text-align: center;
+         margin-bottom: 5rem;
+    }
+
+    &__paragraph {
+          font-family: var(--lato-font);
+          font-weight: 400;
+          font-size: 2rem;
+          margin-bottom: 3rem;
+    }
+}
+
+
+
+////////////////////////////////////////
+////// Reusebale button 
+
+.btn-inline {
+        border: none;
+        background-color: var(--color-robin-egg);
+        padding: 1rem 2rem;
+        font-size: 1.4rem;
+        color: #000;
+        text-transform: uppercase;  
+        text-decoration: none;
+        display: flex;
+        margin: auto;
+        transition: all .2s;
+        
+        &:hover {
+            color: var(--color-white);
+    }
+       &:focus {
+         outline: none;
+         animation: pulsate 1s infinite;
+         color: var(--color-white);
+    }
+}
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+        box-shadow: none;
+    }
+
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 1rem 4rem rgba(0,0,0,.25);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: none;
+    }
+}
+
+////////////////////////////////////////
+////// addition 
+
+.addition {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &__box {
+       flex: 0 0 45%;
+
+       
+
+       &:nth-child(3){
+           text-align: right;
+       }
+        &-photo {
+           width: 100%;
+           display: block;
+        }
+        &-heading {
+            font-family: var(--barlow-font);
+            font-size: 3.2rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        &-paragraph {
+             
+        }
+     
+    }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .composition{
+//     position: relative;
+//       &__photo {
+//           width: 100%;
+//           display: block;
+//           margin-top: 1.5rem;
+//           position: relative;  
+//           box-shadow: 0 1rem 2rem rgba($color-black, .6);
+//           outline: 2px solid $color-primary-dark;
+//           -moz-outline-radius: 3px;
+//           outline-offset: -1.3rem;
+//           filter: grayscale(60%) opacity(95%);
+        
+//       }
+//       &::before{
+//           display: block;
+//           height: 15rem;
+//           background-color: $color-primary-dark;
+//           content: " ";
+//           width: 1rem;
+//           position: absolute;
+//           top: -1rem;
+//           left: -10px;
+      
+//       }
+//       &::after {
+//           display: block;
+//           height: 1rem;
+//           background-color: $color-primary-dark;
+//           content: " ";
+//           width: 15rem;
+//           position: absolute;
+//           top: -1rem;
+//           left: 0px;
+      
+//       }
+//   }

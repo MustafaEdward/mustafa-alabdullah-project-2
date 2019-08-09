@@ -1,0 +1,37 @@
+:root {
+    --color-spruce: #0f614e;
+
+
+    --color-robin-egg:#86e0f9;
+    --color-white: #fff;
+    --color-dark-grey-blue: #0c1423;
+
+    --lato-font : 'Lato', sans-serif;
+    --barlow-font: 'Barlow', sans-serif;
+
+    
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+*::before,
+*::after, 
+* {
+    box-sizing: inherit;
+}
+html {
+   box-sizing: border-box;
+   font-size: 62.5%;
+}
+
+
+body {
+    font-family: var(--lato-font);
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 3.2rem;
+    color: var(--color-white);
+};
