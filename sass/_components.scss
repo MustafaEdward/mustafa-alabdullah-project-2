@@ -32,6 +32,11 @@
         display: block;
     }
 }
+
+
+
+
+
 ////////////////////////////////////////
 ////// NAVIGATION 
 
@@ -69,6 +74,9 @@
 ////// UNDER SEA SECTION 
 
 .under-sea {
+    & > .container > .btn-inline {
+        margin: auto;
+    }
     &__heading {
          font-family: var(--barlow-font);
          font-size: 4.2rem;
@@ -84,6 +92,7 @@
           font-size: 2rem;
           margin-bottom: 3rem;
     }
+    
 }
 
 
@@ -100,7 +109,6 @@
         text-transform: uppercase;  
         text-decoration: none;
         display: flex;
-        margin: auto;
         transition: all .2s;
         
         &:hover {
@@ -136,17 +144,24 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    position: relative;
     &__box {
        flex: 0 0 45%;
-
-       
+      &:first-child {
+          box-shadow: 3rem 3rem 0 var(--color-robin-egg);
+          margin-top: -3rem;
+      }
+      &:last-child {
+        box-shadow: -3rem  3rem 0 var(--color-robin-egg);
+        margin-bottom: -3rem;
+    }
 
        &:nth-child(3){
            text-align: right;
        }
         &-photo {
-           width: 100%;
-           display: block;
+           max-width: 100%;
+           display: block;        
         }
         &-heading {
             font-family: var(--barlow-font);
@@ -156,90 +171,213 @@
             text-transform: uppercase;
         }
         &-paragraph {
+           margin-bottom: 3rem;
              
+        }
+        &-btn {
+            font-size: 2rem;
+            font-family: var(--barlow-font);
+            line-height: 3.2rem;
+            letter-spacing: 1px;
+            text-align: center;
+            text-transform: uppercase;
+            border: none;
+            padding: 1.5rem 3rem;
+            color: var(--color-white);
+            background-color: var(--color-dark-grey-blue);
+            border-radius: 3px;
         }
      
     }
   
 }
 
+////////////////////////////////////////
+////// icons box 
 
+.icon-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    &__section {
+        flex: 0 0 40%;
+       &--icon {
+           background-color: var(--color-robin-egg);
+           height: 4rem;
+           width: 4rem;
+           border-radius: 50%;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// .composition{
-//     position: relative;
-//       &__photo {
-//           width: 100%;
-//           display: block;
-//           margin-top: 1.5rem;
-//           position: relative;  
-//           box-shadow: 0 1rem 2rem rgba($color-black, .6);
-//           outline: 2px solid $color-primary-dark;
-//           -moz-outline-radius: 3px;
-//           outline-offset: -1.3rem;
-//           filter: grayscale(60%) opacity(95%);
+        &-svg {
+            fill: black;
+            width: 2rem;
+            height: 2rem;
+            align-self: center;
+        }
+       }
         
-//       }
-//       &::before{
-//           display: block;
-//           height: 15rem;
-//           background-color: $color-primary-dark;
-//           content: " ";
-//           width: 1rem;
-//           position: absolute;
-//           top: -1rem;
-//           left: -10px;
-      
-//       }
-//       &::after {
-//           display: block;
-//           height: 1rem;
-//           background-color: $color-primary-dark;
-//           content: " ";
-//           width: 15rem;
-//           position: absolute;
-//           top: -1rem;
-//           left: 0px;
-      
-//       }
-//   }
+        &-heading {
+            font-family: var(--barlow-font);
+            font-size: 8rem;
+            text-transform: uppercase;
+            line-height: 9.2rem;
+        }
+        &-pargraph {
+            
+        }
+    }
+}
+
+////////////////////////////////////////
+////// BANNER 
+    .banner {
+       
+        &__photo {
+            display: block;
+            max-width: 100%;
+            width: 100%;
+            // margin: auto;
+        }
+    }
+
+
+////////////////////////////////////////
+////// profile section 
+
+.profile {
+display: flex;
+    .profile__box {
+        &:last-child {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-left: 7rem;
+        }
+        &:first-child {
+            box-shadow: 3.5rem 3.5rem 0 var(--color-robin-egg);
+        }
+
+        &-photo {
+            display: block;
+            flex: 0 0 60%;
+           
+        }
+        &-heading {
+          font-size: 4.2rem;
+          font-family: var(--barlow-font);
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          margin-bottom: 4rem;
+
+        }
+        &-pargraph {
+          flex-grow: 1;
+        }
+    }
+}
+
+
+
+
+////////////////////////////////////////
+////// GALLERY 
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex: 0 0 30%;
+        margin: auto;
+    }
+    &__photo {
+         max-width: 100%;
+         display: block;
+        
+    }
+}
+
+////////////////////////////////////////
+////// FOOTER 
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+          
+    &__paragraph {
+       color: var(--color-dark-grey-blue);
+       font-size: 1.6rem;
+
+
+    }
+}
+
+
+
+////////////////////////////////////////////////////////////// 
+//////// BLOG STYLES 
+
+/* BLOG HEADER */
+
+.header-blog {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(#000, 0.6),
+        rgba(#000, 0.7)),
+        url(../img/blog-header.jpg);
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        &__heading {
+        font-size: 8rem;
+        font-family: var(--barlow-font);
+        line-height: 9.2rem;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 7rem;
+
+        }
+        
+}
+
+
+//////////////////////////////////////////
+/// CONTENT 
+.gallery {
+    &__photo {
+         width: 100%;
+         display: block;
+         
+    }
+}
+
+.box {
+    background-color: blue;
+    padding: 5rem 0 4rem;
+    &__heading {
+      font-family: var(--barlow-font);
+      font-size: 3.2rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+
+    }
+    
+    &__paragraph {
+
+    }
+
+    &__list {
+
+        &-item {
+
+        }
+    }
+}
+
+    

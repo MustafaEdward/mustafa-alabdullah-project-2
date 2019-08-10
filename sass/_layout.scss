@@ -9,15 +9,46 @@
     border: none;
     background-color: var(--color-dark-grey-blue);
     height: 70rem;
+    padding-top: 10rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 4rem;
 }
 
 .addition {
     background-color: var(--color-spruce);
   
 }
+.icon-box {
+    background-color: var(--color-dark-grey-blue);
+    height: 60rem;
+    padding-top: 14rem;
+}
 
+.profile {
+    background-color: var(--color-dark-grey-blue);
+}
+.gallery {
+    background-color: var(--color-spruce);
+}
+.footer {
+    background-color: var(--color-robin-egg);
+}
+
+//////////////////////////////////////// 
+///// Blog.html STYLES 
+    .content {
+        background-color: var(--color-dark-grey-blue);
+        display: flex;
+    }
+    .about {
+        flex: 0 0 40%;
+        margin-right: 5rem;
+
+    }
+    
+    .discovery {
+        flex: 1;
+
+    }
