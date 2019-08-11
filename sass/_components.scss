@@ -530,9 +530,10 @@ display: flex;
    
 }
 .fieldset {
-    border: none;
-    display: inline-block;
+    display: flex;
+    justify-content: space-between;
 }
+
 .form-control {
   background: transparent;
   border: none;
@@ -543,13 +544,13 @@ display: flex;
   margin-bottom: 2rem;
   display: flex;
   flex-direction: row;
+  flex: 0 0 40%;
 }
 
 .form-area {
   border: 1px solid var(--color-robin-egg);
 }
 button[type=submit]{
-    background-color: var(--color-spruce);
     border:none;
     color:var(--color-white);
     text-transform: uppercase;
@@ -558,4 +559,56 @@ button[type=submit]{
     border-radius: 4px;
     margin: 0 auto;
     width: 100%;
+  }
+
+
+
+  ////////////////////////////////////////// form section
+
+  .header-form {
+    height: 60vh;
+    background-image: url(../img/contact-header.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+.contact-body {
+    background-color: var(--color-dark-grey-blue);
+
+}
+  .contant-page {
+      display: flex;
+      align-items: center;
+  }
+
+  .address {
+     flex: 0 0 35%;
+     margin-right: 4rem;
+    &__icon {
+      width: 3rem;
+      height: 3rem;
+      fill: white;
+      margin-right: 2rem;
+    }
+  }
+  .contact-section-form {
+      flex: 1;
+      background-color: var(--color-spruce);
+      padding: 3rem;
+      box-shadow: -3rem 3rem 0 var(--color-robin-egg); 
+
+  }
+
+  ::-webkit-input-placeholder {
+      color: #fff;
+      padding: 1rem;
+
+  }
+
+  .submit {
+      background-color: var(--color-spruce);
+  }
+  .submit-form {
+      background-color: var(--color-dark-grey-blue);
   }
