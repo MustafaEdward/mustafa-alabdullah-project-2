@@ -11,6 +11,13 @@
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
+
+    @media only screen and (max-width: $bp-medium) {
+       height: 60vh;
+      }
+      @media only screen and (max-width: $bp-smallest) {
+       height: 40vh;
+        }
     
     &__text-box {
         color: var(--color-white);
@@ -19,17 +26,40 @@
         line-height: 12.6rem;
         font-weight: bold;
         text-transform: uppercase;
-        position: absolute;
-        top: 30%;
-        left: 10%;
-        display: block;
-        width: 30%; 
+        flex: 0 0 30%;
+        padding-left: 5rem;
+        @media only screen and (max-width: $bp-medium) {
+            font-size: 8rem;
+            flex: 0 0 100%;
+            text-align: center;
+            margin-top: 10rem;
+          }
+          @media only screen and (max-width: $bp-smallest) {
+            font-size: 5.5rem;
+        }
+      
     }
     &__image {
-        position: absolute;
-        bottom: -26%;
-        right: 0;
+    
         display: block;
+        max-width: 100%;
+        width: 100%;
+        flex: 0 0 50%;
+        margin-top: 15rem;
+        overflow: hidden;
+        @media only screen and (max-width: $bp-largest) {
+            margin-top: 40rem;
+         }
+         @media only screen and (max-width: $bp-medium) {
+            display: none;
+          }
+    }
+
+    &_box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       
     }
 }
 
@@ -74,9 +104,12 @@
 ////// UNDER SEA SECTION 
 
 .under-sea {
+   
     & > .container > .btn-inline {
         margin: auto;
     }
+
+   
     &__heading {
          font-family: var(--barlow-font);
          font-size: 4.2rem;
@@ -84,6 +117,10 @@
          text-transform: uppercase;
          text-align: center;
          margin-bottom: 5rem;
+
+         @media only screen and (max-width: $bp-smallest) {
+            font-size: 3rem;
+        }
     }
 
     &__paragraph {
@@ -91,6 +128,10 @@
           font-weight: 400;
           font-size: 2rem;
           margin-bottom: 3rem;
+        //   @media only screen and (max-width: $bp-medium) {
+        //     width: 80%;
+        //     margin: 4rem auto;
+        //  }
     }
     
 }
@@ -145,23 +186,31 @@
     flex-wrap: wrap;
     justify-content: space-between;
     position: relative;
+
+    @media only screen and (max-width: $bp-medium) {
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       align-content: center;
+     }
+
     &__box {
        flex: 0 0 45%;
-      &:first-child {
-          box-shadow: 3rem 3rem 0 var(--color-robin-egg);
-          margin-top: -3rem;
-      }
-      &:last-child {
-        box-shadow: -3rem  3rem 0 var(--color-robin-egg);
-        margin-bottom: -3rem;
-    }
+       @media only screen and (max-width: $bp-medium) {
+        flex: 0 0 100%;
+        text-align: center;
+     }
 
        &:nth-child(3){
            text-align: right;
+           @media only screen and (max-width: $bp-medium) {
+            text-align: center;
+         }
        }
         &-photo {
            max-width: 100%;
-           display: block;        
+           display: block;  
+                 
         }
         &-heading {
             font-family: var(--barlow-font);
@@ -169,10 +218,17 @@
             font-weight: bold;
             letter-spacing: 1px;
             text-transform: uppercase;
+            @media only screen and (max-width: $bp-largest) {
+               font-size: 2.2rem;
+            }
         }
         &-paragraph {
            margin-bottom: 3rem;
-             
+           @media only screen and (max-width: $bp-largest) {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            
+         }
         }
         &-btn {
             font-size: 2rem;
@@ -186,56 +242,71 @@
             color: var(--color-white);
             background-color: var(--color-dark-grey-blue);
             border-radius: 3px;
+            @media only screen and (max-width: $bp-largest) {
+                font-size: 1rem;
+                padding: .8rem 1.5rem;  
+             }
+             @media only screen and (max-width: $bp-medium) {
+                margin-bottom: 3rem;
+              }
+
         }
      
     }
   
 }
+.photo-shadow-1 {
+    box-shadow: 3rem 3rem 0 var(--color-robin-egg);
+    margin-top: -3rem;
+}
+.photo-shadow-2 {
+    box-shadow: -3rem  3rem 0 var(--color-robin-egg);
+    margin-bottom: -3rem;
+}
 
 ////////////////////////////////////////
 ////// icons box 
 
-.icon-box {
+.icon-list {
+    list-style: none;
+    margin: 6rem 0;
+    padding: 6rem 0;
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
-    justify-content: center;
-    &__section {
-        flex: 0 0 40%;
-       &--icon {
-           background-color: var(--color-robin-egg);
-           height: 4rem;
-           width: 4rem;
-           border-radius: 50%;
 
-        &-svg {
-            fill: black;
-            width: 2rem;
-            height: 2rem;
-            align-self: center;
-        }
-       }
-        
+    @media only screen and (max-width: $bp-medium) {
+        flex-direction: column;
+      }
+    
+
+    &__item {
+        flex: 0 0 45%;
+        margin-bottom: 5rem;
+       
+
         &-heading {
-            font-family: var(--barlow-font);
-            font-size: 8rem;
-            text-transform: uppercase;
-            line-height: 9.2rem;
+           font-family: var(--barlow-font);
+           font-size: 8rem;
+           text-transform: uppercase;
+           line-height: 9.2rem;
+           @media only screen and (max-width: $bp-largest) {
+            font-size: 4rem;
+         }
         }
-        &-pargraph {
-            
-        }
+        
     }
 }
 
 ////////////////////////////////////////
 ////// BANNER 
     .banner {
-       
+        background-color: var(--color-dark-grey-blue);
+        
         &__photo {
             display: block;
             max-width: 100%;
-            width: 100%;
-            // margin: auto;
+            width: 100%;  
         }
     }
 
@@ -245,20 +316,27 @@
 
 .profile {
 display: flex;
+@media only screen and (max-width: $bp-medium) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
     .profile__box {
         &:last-child {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             margin-left: 7rem;
-        }
-        &:first-child {
-            box-shadow: 3.5rem 3.5rem 0 var(--color-robin-egg);
+            @media only screen and (max-width: $bp-medium) {
+                margin-top: 10rem;
+              }
         }
 
         &-photo {
             display: block;
             flex: 0 0 60%;
+            box-shadow: 3.5rem 3.5rem 0 var(--color-robin-egg);
            
         }
         &-heading {
@@ -268,9 +346,16 @@ display: flex;
           text-transform: uppercase;
           margin-bottom: 4rem;
 
+          @media only screen and (max-width: $bp-smallest) {
+            font-size: 2.7rem;
+        }
+
         }
         &-pargraph {
           flex-grow: 1;
+          @media only screen and (max-width: $bp-medium) {
+            margin-bottom: 3rem;
+          }
         }
     }
 }
@@ -283,6 +368,8 @@ display: flex;
 .gallery {
     display: flex;
     flex-wrap: wrap;
+
+   
 
     &__item {
         display: flex;
@@ -331,6 +418,11 @@ display: flex;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        @media only screen and (max-width: $bp-medium) {
+            height: 40vh;
+        }
+     
+
 
         &__heading {
         font-size: 8rem;
@@ -356,6 +448,9 @@ display: flex;
     display: flex;
     padding-top: 3rem;
     position: relative;
+    @media only screen and (max-width: $bp-medium) {
+        flex-direction: column;
+    }
 }
 .about {
     flex: 0 0 35%;
@@ -366,16 +461,31 @@ display: flex;
     justify-content: flex-start;
     margin-top: 10rem;
     margin-right: 10rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        flex: 0 0 100%;
+        margin: 0 auto;
+        justify-content: center;
+        padding: 0;
+        height: 80rem;
+    }
     
 }
 .discovery {
     flex: 1;
+    @media only screen and (max-width: $bp-medium) {
+        flex: 0 0 100%;
+    }
+
 }
 
 ///////////////////// gallery left 
 
 .gallery {
     box-shadow: 3rem 0 0 var(--color-spruce);
+    @media only screen and (max-width: $bp-medium) {
+        display: none;
+    }
     &__photo {
          width: 100%;
          display: block;
@@ -387,6 +497,13 @@ display: flex;
         background-color: var(--color-spruce);
         margin-left: 6rem;
         margin-right: -3rem; 
+        @media only screen and (max-width: $bp-medium) {
+           order: -1;
+           margin: 0;
+           text-align: center;
+           background-color: transparent;
+           height: 80rem;
+        }
 
     &__heading {
         font-family: var(--barlow-font);
@@ -395,6 +512,15 @@ display: flex;
         text-transform: uppercase;
         align-self: flex-start;
         margin-left: -0.9rem;
+        margin-bottom: 3rem;
+        @media only screen and (max-width: $bp-largest) {
+            font-size: 2.2rem;
+          
+        }
+        @media only screen and (max-width: $bp-very-large) {
+            font-size: 2.8rem;
+          }  
+        
     }
     
     &__paragraph {
@@ -404,7 +530,6 @@ display: flex;
     &__list {
         list-style-position: inside;
         &-item {
-
         }
     }
 }
@@ -415,7 +540,9 @@ display: flex;
 .description {
  display: flex;
  flex-direction: column;
- 
+ @media only screen and (max-width: $bp-medium) {
+    flex-direction: row;
+}
 
     &__gallery {
         display: block;
@@ -431,7 +558,18 @@ display: flex;
 .details {
         margin-top: 7rem;
         padding-right: 20rem; 
-        position: relative;      
+        position: relative;  
+        @media only screen and (max-width: $bp-very-large) {
+            font-size: 1.6rem;
+          }   
+        
+
+        @media only screen and (max-width: $bp-medium) {
+            padding: 3rem;
+        }
+
+      
+        
          &:before {
             content: "";
             position: absolute;
@@ -440,6 +578,15 @@ display: flex;
             width: calc(75%);
             height: 100%;
             border-bottom: 5px solid var(--color-robin-egg);
+            @media only screen and (max-width: $bp-very-large) {
+                top: 8px;
+                left: -22px;
+              } 
+              @media only screen and (max-width: $bp-medium) {
+                border: none;
+            }
+             
+            
           }
           &:after {
             content: "";
@@ -449,15 +596,31 @@ display: flex;
             height: calc(100% + 5.5rem);
             width: 100%;
             border-left: 5px solid var(--color-robin-egg);
+            @media only screen and (max-width: $bp-very-large) {
+                left: -26px;
+                top: -40px;
+              } 
+              @media only screen and (max-width: $bp-largest) {
+                left: -22px;
+
+             }
+             @media only screen and (max-width: $bp-medium) {
+                border: none;
+            }
           }
 
         &__heading {
         font-size: 3.2rem;
         font-family: var(--barlow-font);
         text-transform: uppercase;
+        @media only screen and (max-width: $bp-very-large) {
+            font-size: 2.2rem;
+          }  
 
         }
         &__paragraph {
+           
+           
            &:last-of-type {
                margin-top: 4rem;
            }
@@ -469,6 +632,9 @@ display: flex;
 .comment {
   margin: 5rem 0 ; 
   padding-right: 20rem;
+  @media only screen and (max-width: $bp-medium) {
+    padding: 3rem;
+}
 
     &__heading {
         font-size: 3.2rem;
@@ -521,17 +687,23 @@ display: flex;
 
 
 .contact-form {
+padding: 10rem 10rem 10rem 0;
 
+@media only screen and (max-width: $bp-medium) {
+    padding: 3rem;
+}
 }
 
 .form {
     display: flex;
     flex-direction: column;
-   
+    flex-wrap: wrap;
 }
 .fieldset {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+  
 }
 
 .form-control {
@@ -545,10 +717,14 @@ display: flex;
   display: flex;
   flex-direction: row;
   flex: 0 0 40%;
+  flex-wrap: wrap;
+
 }
 
 .form-area {
   border: 1px solid var(--color-robin-egg);
+  display: flex;
+  flex-wrap: wrap;
 }
 button[type=submit]{
     border:none;
@@ -571,25 +747,36 @@ button[type=submit]{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    position: relative;
+   
+
+    @media only screen and (max-width: $bp-largest) {
+       height: 40vh;
+     }
   }
-.contact-body {
+ .contact-body {
     background-color: var(--color-dark-grey-blue);
 
-}
+ }
   .contant-page {
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
+    
   }
 
   .address {
      flex: 0 0 35%;
      margin-right: 4rem;
+     @media only screen and (max-width: $bp-medium) {
+      flex: 0 0 100%;
+      }
     &__icon {
       width: 3rem;
       height: 3rem;
       fill: white;
       margin-right: 2rem;
+      
+      
     }
   }
   .contact-section-form {
@@ -597,7 +784,10 @@ button[type=submit]{
       background-color: var(--color-spruce);
       padding: 3rem;
       box-shadow: -3rem 3rem 0 var(--color-robin-egg); 
-
+      @media only screen and (max-width: $bp-medium) {
+        order: -1;
+       
+      }
   }
 
   ::-webkit-input-placeholder {
@@ -608,6 +798,7 @@ button[type=submit]{
 
   .submit {
       background-color: var(--color-spruce);
+      
   }
   .submit-form {
       background-color: var(--color-dark-grey-blue);

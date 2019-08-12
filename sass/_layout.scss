@@ -1,29 +1,35 @@
 .container {
     max-width: 120rem;
     margin: 8rem auto;
-    width: 80%;
+    width: 80%;  
+    // @media only screen and (max-width: $bp-medium) {
+    //     width: 100%;
+    //     margin: 0 auto;
+    //     max-width: 100%;
+    // }
 }
 
 
 .under-sea {
     border: none;
     background-color: var(--color-dark-grey-blue);
-    height: 70rem;
     padding-top: 10rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @media only screen and (max-width: $bp-smallest) {
+        padding-top: 4rem;
+    }
+
 }
 
 .addition {
-    background-color: var(--color-spruce);
-  
+    background-color: var(--color-spruce);  
 }
 .icon-box {
     background-color: var(--color-dark-grey-blue);
-    height: 60rem;
-    padding-top: 14rem;
+    padding:7rem 0 7rem 0;
 }
 
 .profile {
