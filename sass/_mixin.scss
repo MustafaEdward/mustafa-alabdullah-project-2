@@ -1,0 +1,52 @@
+@mixin barlowSmall{
+    font-family: var(--barlow-font);
+    font-size: 3.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+@mixin barlowMeduim {
+          text-transform: uppercase;
+          font-family: var(--barlow-font);
+          font-size: 2rem;
+          font-weight: bold;
+          letter-spacing: 1px;
+}
+
+@mixin barlowLarge{
+    font-family: var(--barlow-font);
+    font-size: 3.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+@mixin background {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+@mixin focus{
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(var(--color-dark-grey-blue) , .1);
+
+    &:hover {
+        transform: translateY(-3px);
+       box-shadow: 0 1rem 2rem rgba(var(--color-dark-grey-blue) ,.2);
+    }
+}
+
+@mixin photosAnimation {
+    &:hover {
+        outline: 1.5rem solid var(--color-dark-grey-blue);
+        transform: scale(1.05) translateY(-.5rem);
+        box-shadow: 0 2.5rem 4rem rgba(var(--color-dark-grey-blue), .5);
+        z-index: 20;
+    }
+}
+
+
+

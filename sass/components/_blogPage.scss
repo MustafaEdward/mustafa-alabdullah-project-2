@@ -1,0 +1,254 @@
+@import "../mixin";
+@import "../base";
+
+/* BLOG HEADER */
+
+.header-blog {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(#000, 0.6),
+        rgba(#000, 0.7)),
+        url(../img/blog-header.jpg);
+        height: 100vh;
+        @include background;
+        @media only screen and (max-width: $bp-medium) {
+            height: 40vh;
+        }
+
+        &__heading {
+        font-size: 8rem;
+        font-family: var(--barlow-font);
+        line-height: 9.2rem;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 7rem;
+
+        }
+        
+}
+
+//////////////////////////////////////////
+/////////////layout 
+.content {
+    background-color: var(--color-dark-grey-blue);
+    display: flex;
+    padding-top: 3rem;
+    position: relative;
+    @media only screen and (max-width: $bp-medium) {
+        flex-direction: column;
+    }
+}
+.about {
+    flex: 0 0 35%;
+    padding-right: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 10rem;
+    margin-right: 10rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        flex: 0 0 100%;
+        margin: 0 auto;
+        justify-content: center;
+        padding: 0;
+        height: 80rem;
+    }
+    
+}
+.discovery {
+    flex: 1;
+    @media only screen and (max-width: $bp-medium) {
+        flex: 0 0 100%;
+    }
+
+}
+
+///////////////////// gallery left 
+
+.gallery-photo {
+    box-shadow: 3rem 0 0 var(--color-spruce);
+    @media only screen and (max-width: $bp-medium) {
+        display: none;
+    } 
+  
+    &__photo {
+         width: 100%;
+         display: block;
+         margin-top: -3rem; 
+         @media only screen and (max-width: $bp-medium) {
+            display: none;
+        } 
+      
+
+    }
+}
+
+.box {
+        background-color: var(--color-spruce);
+        margin-left: 6rem;
+        margin-right: -3rem; 
+        @media only screen and (max-width: $bp-medium) {
+           order: 1;
+           margin: 0;
+           text-align: center;
+           background-color: transparent;
+           height: 80rem;
+        }
+
+    &__heading {
+        @include barlowSmall;
+        align-self: flex-start;
+        margin-left: -0.9rem;
+        margin-bottom: 3rem;
+        @media only screen and (max-width: $bp-largest) {
+            font-size: 2.2rem;
+          
+        }
+        @media only screen and (max-width: $bp-very-large) {
+            font-size: 2.8rem;
+          }  
+        
+    }
+    
+    &__paragraph {
+        margin-bottom: 5rem;
+    }
+
+    &__list {
+        list-style-position: inside;
+        &-item {
+        }
+    }
+}
+
+
+///////////////// discovery right side 
+
+.description {
+ display: flex;
+ flex-direction: column;
+ @media only screen and (max-width: $bp-medium) {
+    flex-direction: row;
+}
+
+    &__gallery {
+        display: block;
+        max-width: 100%;
+        box-shadow: -3rem 3rem 0 var(--color-robin-egg);
+        margin-top: -30rem;
+        transition: all 0.4s;
+    }
+}
+.details {
+        margin-top: 7rem;
+        padding-right: 20rem; 
+        position: relative;  
+        @media only screen and (max-width: $bp-very-large) {
+            font-size: 1.6rem;
+          }   
+        
+
+        @media only screen and (max-width: $bp-medium) {
+            padding: 3rem;
+        }
+
+      
+        
+         &:before {
+            content: "";
+            position: absolute;
+            top: 8px;
+            left: -30px;
+            width: calc(75%);
+            height: 100%;
+            border-bottom: 5px solid var(--color-robin-egg);
+            @media only screen and (max-width: $bp-very-large) {
+                top: 8px;
+                left: -22px;
+              } 
+              @media only screen and (max-width: $bp-medium) {
+                border: none;
+            }
+             
+            
+          }
+          &:after {
+            content: "";
+            position: absolute;
+            left: -30px;
+            top: -50px;
+            height: calc(100% + 5.5rem);
+            width: 100%;
+            border-left: 5px solid var(--color-robin-egg);
+            @media only screen and (max-width: $bp-very-large) {
+                left: -26px;
+                top: -40px;
+              } 
+              @media only screen and (max-width: $bp-largest) {
+                left: -22px;
+
+             }
+             @media only screen and (max-width: $bp-medium) {
+                border: none;
+            }
+          }
+
+        &__heading {
+       @include barlowSmall;
+        @media only screen and (max-width: $bp-very-large) {
+            font-size: 2.2rem;
+          }  
+
+        }
+        &__paragraph {
+           
+           
+           &:last-of-type {
+               margin-top: 4rem;
+           }
+        }
+}
+
+////////////////////////////////////// comment section 
+
+.comment {
+  margin: 5rem 0 ; 
+  padding-right: 20rem;
+  @media only screen and (max-width: $bp-medium) {
+    padding: 3rem;
+}
+
+    &__heading {
+        @include barlowSmall;
+        margin-bottom: 6rem;
+       
+    }
+    &__user {
+       display: flex;
+     justify-content: flex-start;
+     align-items: flex-start;
+    }
+    &__photo {
+        max-width: 100%;
+        display: block;
+        margin-right: 3rem;
+        width: 6rem;
+        height: 6rem;
+    }
+
+    &__user-box {
+
+    }
+
+    &__user-date {
+
+    }
+    &__user-paragraph {
+
+    }
+    
+}

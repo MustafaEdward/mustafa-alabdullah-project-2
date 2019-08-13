@@ -15,17 +15,38 @@
             <div class="navigation">
                     <ul class="navigation__list">
                         <li class="navigation__item"><a href="index.html" class="navigation__link"> home</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">about</a></li>
+                        <li class="navigation__item"><a href="#about" class="navigation__link">about</a></li>
                         <li class="navigation__item"><a href="blog.html" class="navigation__link">blog</a></li>
                         <li class="navigation__item"><a href="form.html" class="navigation__link">contact</a></li>
                     </ul>
             </div>
+            <label class="navigation-small">
+              <input type='checkbox' class="navigation-small__input">
+              <span class='menu'>
+                <span class='hamburger'></span>
+              </span>
+              <ul class="navigation-small__list">
+                <li class="navigation-unit">
+                  <a href='index.html' class="navigation-item">Home</a>
+                </li>
+                <li  class="navigation-unit">
+                  <a href='./blog.html#about' class="navigation-item">About</a>
+                </li  class="navigation-unit">
+                <li  class="navigation-unit">
+                  <a href='blog.html' class="navigation-item">Blog</a>
+                </li >
+                <li  class="navigation-unit">
+                    <a href='form.html' class="navigation-item">Contact</a>
+               </li>
+              </ul>
+            </label>
+
           <h1 class="header-blog__heading">blog</h1>
       </header>
       <div class="content">
-          <div class="about">
-                <div class="gallery">
-                        <img src="img/side-blog-image.jpg" alt="" class="gallery__photo">
+          <div class="about" id="about">
+                <div class="gallery-photo">
+                        <img src="img/side-blog-image.jpg" alt="a group of people watching a black whale shark in an aquarium" class="gallery-photo__photo">
                 </div>
                 <div class="box">
                   <div class="container">
@@ -43,9 +64,10 @@
                 </div>
           </div>
 
+
           <main class="dicovery">
               <div class="description">
-                  <img src="./img/blog-post-image.jpg" alt="" class="description__gallery">
+                  <img src="./img/blog-post-image.jpg" alt="animals inside an aquarium" class="description__gallery">
                 </div>
                 <div class="details">   
                   <h2 class="details__heading">dicovering new species</h2>
@@ -66,7 +88,7 @@
 
                   <figure class="comment">
                         <figcaption class="comment__user">
-                            <img src="img/comment-2.jpg" alt="User 1" class="comment__photo">
+                            <img src="img/comment-2.jpg" alt="User 2" class="comment__photo" >
                             <div class="comment__user-box">
                                 <p class="comment__user-date">Wednsday Octobor 10th, 2018 by Julia</p>
                                 <p class="comment__user-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam quam quia ipsum accusamus explicabo aspernatur ex consequatur dolorem dicta.</p>
