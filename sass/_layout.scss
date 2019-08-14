@@ -2,11 +2,6 @@
     max-width: 120rem;
     margin: 8rem auto;
     width: 80%;  
-    // @media only screen and (max-width: $bp-medium) {
-    //     width: 100%;
-    //     margin: 0 auto;
-    //     max-width: 100%;
-    // }
 }
 
 
@@ -21,7 +16,6 @@
     @media only screen and (max-width: $bp-smallest) {
         padding-top: 4rem;
     }
-
 }
 
 .addition {
@@ -43,7 +37,7 @@
     background-color: var(--color-robin-egg);
 }
 
-//////////////////////////////////////// 
-///// Blog.html STYLES 
- 
-
+ //cannot be styles with flexbox, added for accessibilty 
+fieldset {
+    border: none;
+}

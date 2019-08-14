@@ -10,33 +10,34 @@
     --barlow-font: 'Barlow', sans-serif;
 
 }
+
+//Width used for media queries 
 $bp-very-large: 86em;  // 1278px   
 $bp-largest: 75em;     // 1200px
 $bp-large: 68.75em;    // 1100px
 $bp-medium: 54em;   // 864px
-// $bp-small: 37.5em;     // 600px
 $bp-smallest: 31.25em; // 500px
 
 
 * {
     margin: 0;
     padding: 0;
-}
+  }
 *::before,
 *::after, 
 * {
     box-sizing: inherit;
-}
+  }
 html {
    box-sizing: border-box;
    font-size: 62.5%;
    scroll-behavior: smooth;
    @media only screen and (max-width: $bp-very-large) {
     font-size: 55%;
-}
-@media only screen and (max-width: $bp-largest) {
+   }
+   @media only screen and (max-width: $bp-largest) {
     font-size: 46%;
- }
+   }
 
 }
 
@@ -51,8 +52,10 @@ body {
 
 
 
-///////////////////////////////////// 
-//// UTILITIES
+
+/* ----------------------------------------------- */
+/* UTILITIES */
+/* ----------------------------------------------- */ 
 .u-margin-top{ 
     margin-top: 8rem !important;
  }

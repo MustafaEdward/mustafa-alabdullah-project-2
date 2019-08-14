@@ -33,10 +33,15 @@ body {
   line-height: 3.2rem;
   color: var(--color-white); }
 
+/* ----------------------------------------------- */
+/* UTILITIES */
+/* ----------------------------------------------- */
 .u-margin-top {
   margin-top: 8rem !important; }
 
-/* BLOG HEADER */
+/* ----------------------------------------------- */
+/* BLOG PAGE STYLES */
+/* ----------------------------------------------- */
 .header-blog {
   background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url(../img/blog-header.jpg);
   height: 100vh;
@@ -56,6 +61,9 @@ body {
     align-items: center;
     padding-top: 7rem; }
 
+/* ----------------------------------------------- */
+/* PAGE LAYOUT */
+/* ----------------------------------------------- */
 .content {
   background-color: var(--color-dark-grey-blue);
   display: flex;
@@ -88,6 +96,9 @@ body {
     .discovery {
       flex: 0 0 100%; } }
 
+/* ----------------------------------------------- */
+/* THE LEFT SIDE OF THE MAIN PAGE */
+/* ----------------------------------------------- */
 .gallery-photo {
   box-shadow: 3rem 0 0 var(--color-spruce); }
   @media only screen and (max-width: 54em) {
@@ -114,7 +125,7 @@ body {
       height: 80rem; } }
   .box__heading {
     font-family: var(--barlow-font);
-    font-size: 3.2rem;
+    font-size: 3.1rem;
     font-weight: bold;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -132,6 +143,9 @@ body {
   .box__list {
     list-style-position: inside; }
 
+/* ----------------------------------------------- */
+/* RIGHT SIDE OF THE PAGE ON DESKTOP VIEW */
+/* ----------------------------------------------- */
 .description {
   display: flex;
   flex-direction: column; }
@@ -190,7 +204,7 @@ body {
         border: none; } }
   .details__heading {
     font-family: var(--barlow-font);
-    font-size: 3.2rem;
+    font-size: 3.1rem;
     font-weight: bold;
     letter-spacing: 1px;
     text-transform: uppercase; }
@@ -200,6 +214,9 @@ body {
   .details__paragraph:last-of-type {
     margin-top: 4rem; }
 
+/* ----------------------------------------------- */
+/* COMMENTS SECTION */
+/* ----------------------------------------------- */
 .comment {
   margin: 5rem 0;
   padding-right: 20rem; }
@@ -208,7 +225,7 @@ body {
       padding: 3rem; } }
   .comment__heading {
     font-family: var(--barlow-font);
-    font-size: 3.2rem;
+    font-size: 3.1rem;
     font-weight: bold;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -224,6 +241,9 @@ body {
     width: 6rem;
     height: 6rem; }
 
+/* ----------------------------------------------- */
+/* CONTACT FORM STYLES */
+/* ----------------------------------------------- */
 .visuallyHidden:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
@@ -295,6 +315,23 @@ button[type=submit] {
   @media only screen and (max-width: 75em) {
     .header-form {
       height: 40vh; } }
+  .header-form__heading {
+    font-size: 5rem;
+    font-family: var(--barlow-font);
+    line-height: 9.2rem;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8rem;
+    font-family: var(--barlow-font);
+    line-height: 9.2rem;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 7rem;
+    margin-top: 4rem; }
 
 .contact-body {
   background-color: var(--color-dark-grey-blue); }
@@ -341,6 +378,9 @@ button[type=submit] {
     background-color: var(--color-robin-egg);
     color: var(--color-dark-grey-blue); }
 
+/* ----------------------------------------------- */
+/* MAIN PAGE STYLES */
+/* ----------------------------------------------- */
 .header {
   height: 100vh;
   background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url(../img/header-image.jpg);
@@ -572,14 +612,9 @@ button[type=submit] {
       max-width: 100%;
       display: block;
       transition: all .3s; }
-      .addition__box-photo:hover {
-        outline: 1.5rem solid var(--color-dark-grey-blue);
-        transform: scale(1.05) translateY(-0.5rem);
-        box-shadow: 0 2.5rem 4rem rgba(var(--color-dark-grey-blue), 0.5);
-        z-index: 20; }
     .addition__box-heading {
       font-family: var(--barlow-font);
-      font-size: 3.2rem;
+      font-size: 3.1rem;
       font-weight: bold;
       letter-spacing: 1px;
       text-transform: uppercase; }
@@ -636,7 +671,8 @@ button[type=submit] {
   flex-wrap: wrap; }
   @media only screen and (max-width: 54em) {
     .icon-list {
-      flex-direction: column; } }
+      flex-direction: column;
+      padding: 2rem 0 .5rem; } }
   .icon-list__item {
     flex: 0 0 45%;
     margin-bottom: 5rem; }
@@ -693,7 +729,7 @@ button[type=submit] {
     .profile .profile__box-photo:hover {
       outline: 1.5rem solid var(--color-dark-grey-blue);
       transform: scale(1.05) translateY(-0.5rem);
-      box-shadow: 0 2.5rem 4rem rgba(var(--color-dark-grey-blue), 0.5);
+      box-shadow: 0 1.2rem 4rem rgba(var(--color-dark-grey-blue), 0.5);
       z-index: 20; }
   .profile .profile__box-heading {
     font-family: var(--barlow-font);
@@ -763,14 +799,6 @@ button[type=submit] {
     opacity: 1;
     transform: translate(0); } }
 
-@keyframes moveInBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(3rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
-
 :root {
   --color-spruce: #0f614e;
   --color-robin-egg:#86e0f9;
@@ -806,6 +834,9 @@ body {
   line-height: 3.2rem;
   color: var(--color-white); }
 
+/* ----------------------------------------------- */
+/* UTILITIES */
+/* ----------------------------------------------- */
 .u-margin-top {
   margin-top: 8rem !important; }
 
@@ -841,3 +872,6 @@ body {
 
 .footer {
   background-color: var(--color-robin-egg); }
+
+fieldset {
+  border: none; }

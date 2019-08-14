@@ -1,23 +1,24 @@
 @import "../mixin";
 
-////////////////////////////////////////
-////// HEADER
+/* ----------------------------------------------- */
+/* MAIN PAGE STYLES */
+/* ----------------------------------------------- */ 
 .header {
     height: 100vh;
     background-image: linear-gradient(
         to right bottom,
         rgba(#000, 0.6),
         rgba(#000, 0.7)),
-    url(../img/header-image.jpg);
-   @include background;
-    position: relative;
+        url(../img/header-image.jpg);
+        @include background;
+        position: relative;
 
     @media only screen and (max-width: $bp-medium) {
-       height: 60vh;
+         height: 60vh;
       }
       @media only screen and (max-width: $bp-smallest) {
-       height: 40vh;
-        }
+         height: 40vh;
+      }
     
     &__text-box {
         color: var(--color-white);
@@ -74,7 +75,6 @@
 
 ////////////////////////////////////////
 ////// NAVIGATION 
-
 .navigation {
     display: block;
        @media only screen and (max-width: $bp-medium) {
@@ -105,7 +105,6 @@
 
    
 }
-
 
 .navigation-small {
     .menu {
@@ -202,34 +201,27 @@
       text-decoration: none;
     }
   }
-  
-  
-
 
 ////////////////////////////////////////
 ////// UNDER SEA SECTION 
-
 .under-sea {
-   
     & > .container > .btn-inline {
         margin: auto;
     }
-
-   
     &__heading {
          @include barlowLarge;
          text-align: center;
          margin-bottom: 5rem;
          background-image: linear-gradient(to right, var(--color-white), var(--color-dark-grey-blue));
-        -webkit-background-clip: text;
-        color: transparent;
-        transition: all .4s;
+         -webkit-background-clip: text;
+         color: transparent;
+         transition: all .4s;
          @media only screen and (max-width: $bp-smallest) {
             font-size: 3rem;
         }
         &:hover {
-            transform: skewY(2deg) skewX(15deg) scale(1.1);
-            text-shadow: .5rem 1rem 2rem rgba(var(--color-dark-grey-blue), .2);
+          transform: skewY(2deg) skewX(15deg) scale(1.1);
+          text-shadow: .5rem 1rem 2rem rgba(var(--color-dark-grey-blue), .2);
         }
     }
 
@@ -238,19 +230,12 @@
           font-weight: 400;
           font-size: 2rem;
           margin-bottom: 3rem;
-        //   @media only screen and (max-width: $bp-medium) {
-        //     width: 80%;
-        //     margin: 4rem auto;
-        //  }
     }
     
 }
 
-
-
 ////////////////////////////////////////
 ////// Reusebale button 
-
 .btn-inline {
         border: none;
         background-color: var(--color-robin-egg);
@@ -272,18 +257,13 @@
     }
 }
 
-
 ////////////////////////////////////////
 ////// addition 
-
 .addition {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    position: relative;
-
-
-
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      position: relative;
     @media only screen and (max-width: $bp-medium) {
        flex-direction: column;
        justify-content: center;
@@ -308,9 +288,6 @@
            max-width: 100%;
            display: block;
            transition: all .3s; 
-           @include photosAnimation;
-
-                 
         }
         &-heading {
          @include barlowSmall;
@@ -322,8 +299,7 @@
            margin-bottom: 3rem;
            @media only screen and (max-width: $bp-largest) {
             font-size: 1.6rem;
-            margin-bottom: 1rem;
-            
+            margin-bottom: 1rem; 
          }
         }
         &-btn {
@@ -344,11 +320,8 @@
              @media only screen and (max-width: $bp-medium) {
                 margin-bottom: 3rem;
               }
-
         }
-     
     }
-  
 }
 .photo-shadow-1 {
     box-shadow: 3rem 3rem 0 var(--color-robin-egg);
@@ -360,8 +333,7 @@
 }
 
 ////////////////////////////////////////
-////// icons box 
-
+////// Icons box section
 .icon-list {
     list-style: none;
     margin: 6rem 0;
@@ -369,12 +341,10 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-
     @media only screen and (max-width: $bp-medium) {
         flex-direction: column;
+        padding: 2rem 0 .5rem;
       }
-    
-
     &__item {
         flex: 0 0 45%;
         margin-bottom: 5rem;
@@ -387,8 +357,7 @@
            @media only screen and (max-width: $bp-largest) {
             font-size: 4rem;
          }
-        }
-        
+        }  
     }
 }
 .box-icon {
@@ -408,7 +377,7 @@
     align-items: center;
 }
 ////////////////////////////////////////
-////// BANNER 
+////// BANNER image 
     .banner {
         background-color: var(--color-dark-grey-blue);
         
@@ -419,17 +388,14 @@
         }
     }
 
-
 ////////////////////////////////////////
-////// profile section 
-
+////// Profile section 
 .profile {
 display: flex;
 @media only screen and (max-width: $bp-medium) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
   }
     .profile__box {
         &:last-child {
@@ -467,17 +433,11 @@ display: flex;
     }
 }
 
-
-
-
 ////////////////////////////////////////
-////// GALLERY 
+////// Gallery section
 .gallery {
     display: flex;
     flex-wrap: wrap;
-
-   
-
     &__item {
         display: flex;
         flex-direction: row;
@@ -487,14 +447,12 @@ display: flex;
     }
     &__photo {
          max-width: 100%;
-         display: block;
-        
+         display: block;    
     }
 }
 
 ////////////////////////////////////////
-////// FOOTER 
-
+////// Footer
 .footer {
     display: flex;
     justify-content: center;
@@ -503,8 +461,6 @@ display: flex;
     &__paragraph {
        color: var(--color-dark-grey-blue);
        font-size: 1.6rem;
-
-
     }
 }
 

@@ -1,10 +1,12 @@
 @import "../mixin";
 @import "../base";
 
-/* BLOG HEADER */
+/* ----------------------------------------------- */
+/* BLOG PAGE STYLES */
+/* ----------------------------------------------- */ 
 
 .header-blog {
-    background-image: linear-gradient(
+        background-image: linear-gradient(
         to right bottom,
         rgba(#000, 0.6),
         rgba(#000, 0.7)),
@@ -25,12 +27,12 @@
         align-items: center;
         padding-top: 7rem;
 
-        }
-        
+        }      
 }
 
-//////////////////////////////////////////
-/////////////layout 
+/* ----------------------------------------------- */
+/* PAGE LAYOUT */
+/* ----------------------------------------------- */ 
 .content {
     background-color: var(--color-dark-grey-blue);
     display: flex;
@@ -67,7 +69,9 @@
 
 }
 
-///////////////////// gallery left 
+/* ----------------------------------------------- */
+/* THE LEFT SIDE OF THE MAIN PAGE */
+/* ----------------------------------------------- */ 
 
 .gallery-photo {
     box-shadow: 3rem 0 0 var(--color-spruce);
@@ -81,13 +85,11 @@
          margin-top: -3rem; 
          @media only screen and (max-width: $bp-medium) {
             display: none;
-        } 
-      
-
+        }  
     }
 }
 
-.box {
+ .box {
         background-color: var(--color-spruce);
         margin-left: 6rem;
         margin-right: -3rem; 
@@ -110,23 +112,18 @@
         }
         @media only screen and (max-width: $bp-very-large) {
             font-size: 2.8rem;
-          }  
-        
+          }    
     }
-    
     &__paragraph {
         margin-bottom: 5rem;
     }
-
     &__list {
         list-style-position: inside;
-        &-item {
-        }
     }
 }
-
-
-///////////////// discovery right side 
+/* ----------------------------------------------- */
+/* RIGHT SIDE OF THE PAGE ON DESKTOP VIEW */
+/* ----------------------------------------------- */ 
 
 .description {
  display: flex;
@@ -150,14 +147,11 @@
         @media only screen and (max-width: $bp-very-large) {
             font-size: 1.6rem;
           }   
-        
 
         @media only screen and (max-width: $bp-medium) {
             padding: 3rem;
         }
 
-      
-        
          &:before {
             content: "";
             position: absolute;
@@ -173,8 +167,7 @@
               @media only screen and (max-width: $bp-medium) {
                 border: none;
             }
-             
-            
+              
           }
           &:after {
             content: "";
@@ -205,32 +198,33 @@
 
         }
         &__paragraph {
-           
-           
+               
            &:last-of-type {
                margin-top: 4rem;
            }
         }
 }
 
-////////////////////////////////////// comment section 
+/* ----------------------------------------------- */
+/* COMMENTS SECTION */
+/* ----------------------------------------------- */ 
 
 .comment {
-  margin: 5rem 0 ; 
-  padding-right: 20rem;
+   margin: 5rem 0 ; 
+   padding-right: 20rem;
   @media only screen and (max-width: $bp-medium) {
-    padding: 3rem;
-}
+      padding: 3rem;
+   }
 
     &__heading {
         @include barlowSmall;
-        margin-bottom: 6rem;
+       margin-bottom: 6rem;
        
     }
     &__user {
        display: flex;
-     justify-content: flex-start;
-     align-items: flex-start;
+       justify-content: flex-start;
+       align-items: flex-start;
     }
     &__photo {
         max-width: 100%;
@@ -239,16 +233,4 @@
         width: 6rem;
         height: 6rem;
     }
-
-    &__user-box {
-
-    }
-
-    &__user-date {
-
-    }
-    &__user-paragraph {
-
-    }
-    
 }

@@ -1,6 +1,6 @@
 @mixin barlowSmall{
     font-family: var(--barlow-font);
-    font-size: 3.2rem;
+    font-size: 3.1rem;
     font-weight: bold;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -28,22 +28,21 @@
     background-repeat: no-repeat;
 }
 
-
 @mixin focus{
     outline: none;
     box-shadow: 0 1rem 2rem rgba(var(--color-dark-grey-blue) , .1);
 
     &:hover {
-        transform: translateY(-3px);
-       box-shadow: 0 1rem 2rem rgba(var(--color-dark-grey-blue) ,.2);
+     transform: translateY(-3px);
+      box-shadow: 0 1rem 2rem rgba(var(--color-dark-grey-blue) ,.2);
     }
 }
-
+// applied on the image in the profile section / main page 
 @mixin photosAnimation {
     &:hover {
         outline: 1.5rem solid var(--color-dark-grey-blue);
         transform: scale(1.05) translateY(-.5rem);
-        box-shadow: 0 2.5rem 4rem rgba(var(--color-dark-grey-blue), .5);
+        box-shadow: 0 1.2rem 4rem rgba(var(--color-dark-grey-blue), .5);
         z-index: 20;
     }
 }
