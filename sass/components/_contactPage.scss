@@ -22,7 +22,7 @@
   padding: 10rem 10rem 10rem 0;
 
 @media only screen and (max-width: $bp-medium) {
-    padding: 3rem;
+    padding: 1rem;
 }
 }
 
@@ -47,7 +47,7 @@
     margin-bottom: 2rem;
     display: flex;
     flex-direction: row;
-    flex: 0 0 40%;
+    flex: 0 0 100%;
     flex-wrap: wrap;
 
 }
@@ -123,14 +123,12 @@ button[type=submit]{
       height: 3rem;
       fill: white;
       margin-right: 2rem;
-      
-      
     }
   }
   .contact-section-form {
       flex: 1;
       background-color: var(--color-spruce);
-      padding: 3rem;
+      padding: .5rem;
       box-shadow: -3rem 3rem 0 var(--color-robin-egg); 
       @media only screen and (max-width: $bp-medium) {
         order: -1; 
@@ -139,7 +137,6 @@ button[type=submit]{
 
   ::-webkit-input-placeholder {
       color: #fff;
-      padding: 1rem;
   }
 
   .submit {

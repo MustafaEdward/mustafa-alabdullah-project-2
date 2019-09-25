@@ -41,7 +41,6 @@
           @media only screen and (max-width: $bp-smallest) {
             font-size: 5.5rem;
         }
-      
     }
 
     &__animated {
@@ -69,7 +68,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-       
     }
 }
 
@@ -438,6 +436,9 @@ display: flex;
 .gallery {
     display: flex;
     flex-wrap: wrap;
+    @media only screen and (max-width: $bp-medium) {
+    display: none;
+    }
     &__item {
         display: flex;
         flex-direction: row;
